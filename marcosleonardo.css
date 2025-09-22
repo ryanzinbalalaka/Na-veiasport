@@ -1,0 +1,240 @@
+/*reset tokens*/
+*{
+  box-sizing:border-box;
+}
+html,body{
+  margin-top:0px;
+  margin-right:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  padding-top:0px;
+  padding-right:0px;
+  padding-bottom:0px;
+  padding-left:0px;
+  
+  
+}
+
+
+body{
+  padding: 0px;
+  text-align:center;
+  font-family: "Libertinus Serif Display";
+  background-color:#F3F3F3;
+  color:black;
+  line-height:1.4;
+}
+
+H1{
+	
+	text-align:left;
+	color:black
+}
+H2{
+  margin-left:20px;
+  text-align:left ;
+  color:green;
+  
+
+}
+
+.img11{
+  background-image: url("");
+  
+  background-size:contain;
+  background-size:center;
+  background-size:no-repeat;
+  
+  max-width:500px;
+  max-height:600px;
+  height:300px;
+}
+
+  .img12{
+  background-image: url();
+  
+  background-size:contain;
+  background-size:center;
+  background-size:no-repeat;
+  
+  max-width:500px;
+  max-height:600px;
+  height:300px;
+}
+:root{
+  --BG:#F3F3F3;
+  --text:black;
+  --radius: 16px;
+  --stroke: black;
+  --brand:white;
+  --brand-2:black;
+  --muted:white;
+}
+
+/*utilitties*/
+.container{
+  Width:min(1120px,92vw);
+  margin-top:0px;
+  margin-right:auto;
+  margin-bottom:0px;
+  margin-left:auto;
+}
+
+a{
+  color:inherit;
+  text-decoration-line:none;
+  text-decoration-style:Solid;
+  text-decoration-color:currentColor;
+  text-decoration-thickness:auto;
+  }  
+  
+  
+  
+  img{
+    Display:block;
+    width:100%;
+    Height:auto;
+    border-top-left-radius:calc(var(--radius) - 6px);
+    border-top-right-radius:calc(var(--radius) - 6px);
+    border-bottom-right-radius:calc(var(--radius) - 6px);
+    border-bottom-left-radius:calc(var(--radius) - 6px);
+    
+  
+  }
+    .tag{
+    position:Absolute;
+    top: 12px ;
+    left: 12px;
+    padding:6px;
+    Font-size: 12px;
+    font-weight: 700;
+    border-radius: 999;
+  }
+  
+  /*--header--*/
+  .site-header{
+    position:sticky;
+    top: 0;
+    Z-index:50;
+    Background-color:RGBA(0,128,0,0.85);
+    Backdrop-filter:Blur(8px);
+    border-bottom-width:1px;
+    border-bottom-style:solid;
+    border-bottom-color: var(--stroke);
+  }
+  .header-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:14px;
+    padding-left:0;
+    padding-bottom: 14px;
+    padding-left:0;
+    Gap:16px;
+  }
+  
+  .logo{
+    font-size: 22px ;
+    font-weight: 800 ;
+    letter-spacing: 0.5px ;
+    display:inlint-flex;
+    align-items:center;
+    gap: 6px;
+  }
+  
+  .logo span{
+    color:var(--brand);   
+  }
+  
+  .logo strong{
+    color:var(--brand-2);
+  
+  }
+  
+  .main-nav ul{
+    display:Flex;
+    gap:20px;
+    list-style-type:none;
+    padding:0;
+    margin:0;
+  }
+  
+  .main-nav a{
+    color:var(--muted);
+    font-weight:600;
+  }
+  .main-nav a:hover{
+    color:var(--text);
+  }
+  
+  /*Hamburguer*/
+.nav-toggle{
+  Display: none;
+}
+
+.hamburger{
+  display:none;
+  Cursor:pointer;
+  width: 32px;
+  height:28px;
+  Position:Relative;
+}
+
+.hamburger span{
+  position:absolute;
+  left:0;
+  right:0;
+  height:3px;
+  background-color:var(--text);
+  Border-radius:4px;
+  transition-property:all;
+  transition-duration:0.2s;
+  transition-timing-function: ease;
+  transition-delay:0;
+}
+.hamburger span:nth-child(1){
+  top:4px;
+}
+.hamburger span:nth-child(2){
+  top:12px;
+}
+.hamburger span:nth-child(3){
+  top:20px;
+}
+.nav-toggle:checked + .hamburger span:nth-child(1){
+  transform:translateY(8px) rotate(45deg);
+}
+.nav-toggle:checked + .hamburger span:nth-child(2){
+  opacity:0;
+}
+.nav-toggle:checked + .hamburger span:nth-child(3){ 
+  transform:translateY(-8px) rotate(-45deg);
+}
+  @media (max-width: 900px){
+    .hamburger{
+      display:inline-block
+    }
+    .main-nav{
+      position:absolute;
+      top:58px;
+      right:0;
+      bottom:auto;
+      left:0;
+      background-color:RGBA(11,13,18,0.85);
+      border-bottom-width: 1px;
+      border-bottom-style:solid;
+      border-bottom-color:var(--stroke);
+      display:none;
+    }
+    .main-nav ul{
+      flex-direction:column ;
+      padding:14px;
+      gap:10px;
+    }
+    .nav-toggle:checked ~ .main-nav{
+      display:block;
+      
+      
+    }
+}
+
